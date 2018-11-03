@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="cartCellReceipt" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="280.0" stylesheets="@../css/cart.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CartCellReceiptController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="9.0" layoutY="10.0" spacing="10.0">
+         <children>
+            <ImageView fx:id="productImage" fitHeight="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="amountLabel" text="4" />
+            <Label fx:id="unitLabel" text="st" />
+            <Label fx:id="productName" text="Product name" />
+         </children>
+      </HBox>
+      <Label fx:id="price" layoutX="219.0" layoutY="27.0" text="20.00 kr" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="9.0" />
+   </children>
+</AnchorPane>

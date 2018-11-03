@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RootController">
+   <children>
+      <StackPane fx:id="mainContainer" layoutX="-0.5" layoutY="179.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0">
+         <children>
+            <fx:include fx:id="purchaseHistoryPane" maxHeight="-Infinity" maxWidth="-Infinity" source="LoginPage.fxml" />
+            <fx:include fx:id="basket" source="BasketCentered.fxml" />
+            <fx:include fx:id="payment" source="PurchaseCentered.fxml" />
+            <fx:include fx:id="confirmation" source="Confirmation.fxml" />
+            <fx:include fx:id="myProfile" source="myProfile.fxml" />
+            <fx:include fx:id="delivery" source="Delivery.fxml" />
+            <fx:include fx:id="registration" source="registration.fxml" />
+            <fx:include fx:id="purchaseHistory" source="purchaseHistory.fxml" StackPane.alignment="TOP_LEFT" />
+            <BorderPane fx:id="noSearchResults" maxWidth="-Infinity" prefHeight="520.0" prefWidth="804.0" StackPane.alignment="TOP_LEFT">
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" opacity="0.3">
+                                 <image>
+                                    <Image url="@../img/searchIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                                    <Text text="Inga sökresultat hittades" opacity="0.5">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="60.0" />
+                     </padding>
+                  </VBox>
+               </center>
+            </BorderPane>
+
+             <AnchorPane fx:id="cartHolder" maxWidth="300.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-Infinity" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" StackPane.alignment="TOP_RIGHT">
+                 <children>
+                     <fx:include fx:id="cart" source="cart.fxml" />
+                 </children>
+             </AnchorPane>
+            <GridPane fx:id="shopGrid" gridLinesVisible="true">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="-Infinity" minWidth="300.0" prefWidth="300.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <fx:include fx:id="shop" source="Shop.fxml" />
+                     </children>
+                  </StackPane>
+               </children>
+            </GridPane>
+
+             <fx:include fx:id="logInPane" source="LoginPage.fxml" />
+         </children>
+      </StackPane>
+       <fx:include fx:id="mainPage" source="MainPage.fxml" />
+       <fx:include fx:id="header" source="header.fxml" />
+      <GridPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="40.0" prefHeight="40.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <HBox fx:id="bar" alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="400.0" stylesheets="@../css/header.css">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="50.0">
+                     <children>
+                        <Circle fill="#485f1b" radius="15.0" stroke="TRANSPARENT" strokeType="INSIDE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="4.0" />
+                        <Circle fill="WHITE" layoutY="10.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="10.0" />
+                        <Polygon fill="WHITE" stroke="TRANSPARENT" strokeType="INSIDE" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="12.0">
+                          <points>
+                            <Double fx:value="-8.0" />
+                            <Double fx:value="6.0" />
+                            <Double fx:value="8.0" />
+                            <Double fx:value="6.0" />
+                            <Double fx:value="0.0" />
+                            <Double fx:value="-10.0" />
+                          </points>
+                        </Polygon>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="matLabel" text="Mat" />
+                  <TextField fx:id="searchBar" prefWidth="450.0" promptText="Sök efter produkt..." styleClass="search-bar" stylesheets="@../css/header.css">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="searchButton" mnemonicParsing="false" styleClass="toolBarButton" stylesheets="@../css/header.css" text="Sök">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="logInLabel" stylesheets="@../css/header.css" text="Ej inloggad" />
+                  <Button fx:id="logInButton" mnemonicParsing="false" styleClass="toolBarButton" stylesheets="@../css/header.css" text="Logga in">
+                      <cursor>
+                          <Cursor fx:constant="HAND" />
+                      </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </GridPane>
+      <Button fx:id="logoBtn" mnemonicParsing="false" opacity="0.0" prefHeight="40.0" prefWidth="104.0" text="Button">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

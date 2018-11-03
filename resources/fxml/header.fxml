@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane fx:id="header" minHeight="-Infinity" prefHeight="140.0" prefWidth="1100.0" styleClass="anchorpane" stylesheets="@../css/header.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="340.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HeaderController">
+   <children>
+      <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1">
+               <children>
+                  <Separator maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="110.0" />
+                  <Button id="purchaseHistoryBtn" fx:id="purchaseHistoryBtn" mnemonicParsing="false">
+                     <graphic>
+                        <VBox fx:id="purchaseHistoryVBox" alignment="TOP_CENTER" spacing="8.0">
+                           <children>
+                               <StackPane>
+                                   <children>
+                                       <ImageView fx:id="purchaseHistoryImg" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true"
+                                                  preserveRatio="true">
+                                           <image>
+                                               <Image url="@../headerImages/purchaseHistory.png" />
+                                           </image>
+                                       </ImageView>
+                                       <Circle fx:id="purchaseHistoryCircle" radius="45.0" stroke="BLACK"
+                                               strokeType="INSIDE"
+                                               styleClass="circleBorder" />
+                                   </children>
+                               </StackPane>
+                              <Label text="Min historik" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets right="-1.0" top="-1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="myProfileBtn" fx:id="myProfileBtn" mnemonicParsing="false">
+                     <graphic>
+                        <VBox fx:id="myProfileVBox" alignment="TOP_CENTER" spacing="8.0">
+                           <children>
+                               <StackPane>
+                                   <children>
+                                       <ImageView fx:id="myProfileImg" fitHeight="90.0" fitWidth="90.0"
+                                                  pickOnBounds="true"
+                                                  preserveRatio="true">
+                                           <image>
+                                               <Image url="@../headerImages/myProfile.png" />
+                                           </image>
+                                       </ImageView>
+                                       <Circle fx:id="myProfileCircle" radius="45.0" stroke="BLACK" strokeType="INSIDE"
+                                               styleClass="circleBorder" />
+                                   </children>
+                               </StackPane>
+                              <Label text="Mitt konto" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets right="-1.0" top="-1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER" spacing="15.0">
+               <children>
+                  <Button id="meatBtn" fx:id="meatBtn" mnemonicParsing="false">
+                     <graphic>
+                        <VBox fx:id="meatVBox" alignment="TOP_CENTER" spacing="8.0">
+                           <children>
+                              <StackPane>
+                                 <children>
+                                    <ImageView fx:id="meatImg" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../headerImages/meat.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Circle fx:id="meatCircle" radius="45.0" stroke="BLACK" strokeType="INSIDE"
+                                            styleClass="circleBorder" />
+                                 </children>
+                              </StackPane>
+                              <Label text="Kött &amp;&#10;fisk" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets right="-1.0" top="-1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="greensBtn" fx:id="greensBtn" mnemonicParsing="false">
+                     <graphic>
+                        <VBox fx:id="greensVBox" alignment="TOP_CENTER" spacing="8.0">
+                           <children>
+                               <StackPane>
+                                   <children>
+                                      <ImageView fx:id="greensImg" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                         <image>
+                                            <Image url="@../headerImages/greens.jpeg" />
+                                         </image>
+                                      </ImageView>
+                                       <Circle fx:id="greensCircle" radius="45.0" stroke="BLACK" strokeType="INSIDE"
+                                                styleClass="circleBorder" />
+                                   </children>
+                               </StackPane>
+                              <Label text="Frukt &amp;&#10;grönt" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets right="-1.0" top="-1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="dairyBtn" fx:id="dairyBtn" mnemonicParsing="false">
+                     <graphic>
+                        <VBox fx:id="dairyVBox" alignment="TOP_CENTER" spacing="8.0">
+                           <children>
+                               <StackPane>
+                                   <children>
+                                       <ImageView fx:id="dairyImg" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                           <image>
+                                               <Image url="@../headerImages/dairy.jpg" />
+                                           </image>
+                                       </ImageView>
+                                       <Circle fx:id="dairyCircle" radius="45.0" stroke="BLACK" strokeType="INSIDE"
+                                               styleClass="circleBorder" />
+                                   </children>
+                               </StackPane>
+                              <Label text="Mejeri" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets right="-1.0" top="-1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="cupboardBtn" fx:id="cupboardBtn" mnemonicParsing="false">
+                     <graphic>
+                        <VBox fx:id="cupboardVBox" alignment="TOP_CENTER" spacing="8.0">
+                           <children>
+                               <StackPane>
+                                   <children>
+                                       <ImageView fx:id="cupboardImg" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                           <image>
+                                               <Image url="@../headerImages/cupboard.jpg" />
+                                           </image>
+                                       </ImageView>
+                                       <Circle fx:id="cupboardCircle" radius="45.0" stroke="BLACK" strokeType="INSIDE"
+                                               styleClass="circleBorder" />
+                                   </children>
+                               </StackPane>
+                              <Label text="Skafferi" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets right="-1.0" top="-1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="drinksBtn" fx:id="drinksBtn" mnemonicParsing="false">
+                     <graphic>
+                        <VBox fx:id="drinksVBox" alignment="TOP_CENTER" spacing="8.0">
+                           <children>
+                               <StackPane>
+                                   <children>
+                                       <ImageView fx:id="drinksImg" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                           <image>
+                                               <Image url="@../headerImages/drinks.jpg" />
+                                           </image>
+                                       </ImageView>
+                                       <Circle fx:id="drinksCircle" radius="45.0" stroke="BLACK" strokeType="INSIDE"
+                                                styleClass="circleBorder" />
+                                   </children>
+                               </StackPane>
+                              <Label text="Drycker" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets right="-1.0" top="-1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="sweetsBtn" fx:id="sweetsBtn" mnemonicParsing="false">
+                     <graphic>
+                        <VBox fx:id="sweetsVBox" alignment="TOP_CENTER" spacing="8.0">
+                           <children>
+                               <StackPane>
+                                   <children>
+                                       <ImageView fx:id="sweetsImg" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                           <image>
+                                               <Image url="@../headerImages/sweets.jpg" />
+                                           </image>
+                                       </ImageView>
+                                       <Circle fx:id="sweetsCircle" radius="45.0" stroke="BLACK" strokeType="INSIDE"
+                                               styleClass="circleBorder" />
+                                   </children>
+                               </StackPane>
+                              <Label text="Sötsaker" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets right="-1.0" top="-1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="mostBoughtBtn" fx:id="mostBoughtBtn" mnemonicParsing="false">
+                     <graphic>
+                        <VBox fx:id="mostBoughtVBox" alignment="TOP_CENTER" spacing="8.0">
+                           <children>
+                               <StackPane>
+                                   <children>
+                                       <ImageView fx:id="mostBoughtImg" fitHeight="90.0" fitWidth="90.0"
+                                                  pickOnBounds="true"
+                                                  preserveRatio="true">
+                                           <image>
+                                               <Image url="@../headerImages/mostBoughtCentered.png" />
+                                           </image>
+                                       </ImageView>
+                                       <Circle fx:id="mostBoughtCircle" radius="45.0" stroke="BLACK"
+                                               strokeType="INSIDE"
+                                               styleClass="circleBorder" />
+                                   </children>
+                               </StackPane>
+                              <Label text="Mina mest&#10;köpta" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets right="-1.0" top="-1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
