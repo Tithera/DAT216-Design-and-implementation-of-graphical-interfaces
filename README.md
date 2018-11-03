@@ -1,6 +1,13 @@
-# imat26
+## DAT216 - Design and implementation of graphical interfaces
 
-## Installation
+Designkurs son ingår i programmet Informationsteknik på Chalmers tekniska högskola.
+
+### Syfte me kursen
+
+I princip alla datorprogram som ska användas av människor använder sig idag av grafiska gränssnitt. Att utveckla dessa innebär inte bara en förståelse av hur dessa kan implementeras utan även att man har en förståelse för de som ska använda programmen. Kursen ger praktisk erfarenhet i dessa två aspekter genom ett grupprojekt som ger en fördjupning av delmomentet kring grafiska komponenter från kursen Objektorienterad programvaruutveckling. Projektets mål är att utveckla en applikation för en specifik användargrupp och att genom att låta dessa testa programmet iterativt förbättra det.
+
+
+### Installation av imat26 projektet
 
 1. Öppna IntelliJ. Om du är på startsidan och inte har några projekt uppe, klicka på "Check out from Version Control."
 2. Om du har projekt uppe, klicka på VCS längst upp i menyfältet och sedan "Check out from Version Control."
